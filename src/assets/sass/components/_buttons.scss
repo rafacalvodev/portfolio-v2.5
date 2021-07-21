@@ -54,21 +54,12 @@
 .button-primary {
   background-color: $neon-blue;
   color: $white;
-  // border-right: 2px dashed $ghost-white;
-  // border-bottom: 2px dashed $ghost-white;
-
-  &:hover {
-    color: $ghost-white;
-  }
 }
 
 .button-secondary {
   background-color: $white;
   color: $almost-black;
   box-shadow: 4px 4px 0 $neon-blue;
-  //border-color: var(--border-2);
-  // border-right: 2px dashed $neon-blue;
-  // border-bottom: 2px dashed $neon-blue;
 
   &:hover {
     box-shadow: 4px 4px 0 $neon-blue;
