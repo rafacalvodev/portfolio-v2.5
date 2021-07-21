@@ -11,7 +11,7 @@
     "build:eleventy": "eleventy",
     "postbuild": "postcss public/assers/css/*.css -u autoprefixer cssnano -r",
     "dev": "cross-env ELEVENTY_ENV=dev npm-run-all build:sass --parallel watch:*",
-    "build": "cross-env ELEVENTY_ENV=prod npm-run-all build:sass build:eleventy social-images",
+    "build": "cross-env ELEVENTY_ENV=prod npm-run-all build:sass --parallel watch:*",
     "lint": "stylelint 'src/assets/sass/**/*.scss' 'src/assets/sass/**/**/*.scss' 'src/assets/sass/**/**/**/*.scss'",
     "lint:fix": "stylelint --fix 'src/assets/sass/**/*.scss' 'src/assets/sass/**/**/*.scss' 'src/assets/sass/**/**/**/*.scss'",
     "bump": "npm --no-git-tag-version version"
