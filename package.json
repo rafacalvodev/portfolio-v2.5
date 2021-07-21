@@ -10,7 +10,7 @@
     "build:sass": "npm-run-all --parallel build:sass-site",
     "build:eleventy": "eleventy",
     "dev": "cross-env ELEVENTY_ENV=dev npm-run-all build:sass --parallel watch:*",
-    "build": "cross-env ELEVENTY_ENV=prod npm-run-all build:sass build:eleventy",
+    "build": "cross-env ELEVENTY_ENV=prod npm-run-all build:sass build:eleventy --parallel watch:*",
     "lint": "stylelint 'src/assets/sass/**/*.scss' 'src/assets/sass/**/**/*.scss' 'src/assets/sass/**/**/**/*.scss'",
     "lint:fix": "stylelint --fix 'src/assets/sass/**/*.scss' 'src/assets/sass/**/**/*.scss' 'src/assets/sass/**/**/**/*.scss'",
     "bump": "npm --no-git-tag-version version"
