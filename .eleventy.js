@@ -23,6 +23,8 @@ module.exports = function (eleventyConfig) {
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
+  eleventyConfig.addPassthroughCopy('src/_redirects');
+
   eleventyConfig.addWatchTarget('./src/assets/sass/');
 
   eleventyConfig.addPassthroughCopy('./src/assets/sass');
