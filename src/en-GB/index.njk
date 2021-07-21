@@ -1,0 +1,155 @@
+---
+  layout: layouts/base.njk
+  title: Rafael Calvo — Front-end Web Developer and UI/UX Designer
+  header: I can help you make a fast, good looking and accessible website
+  subheader: Hello, I'm Rafael Calvo
+  description: 'Rafael Calvo, front-end web developer and UX designer. From Caracas, Venezuela.'
+---
+
+<!-- Hero Section ↓ -->
+<section class="home-hero">
+  <div class="main-hero-text">
+    <h1>
+      <small>{{ subheader }}</small
+      ><br />{{ header }}
+    </h1>
+  </div>
+
+  <div class="main-hero-cta">
+    <a class="button button-primary" href="#projects">See my work</a>
+    <a class="button button-secondary" href="/{{ locale }}/contact/">{{
+      'contact_me' | i18n
+    }}</a>
+  </div>
+</section>
+
+<!-- Portfolio Section ↓ -->
+<section class="projects-section" id="projects">
+  <h2>Some of my works</h2>
+  <ul class="projects-grid">
+    {%- for item in collections.prominent -%}
+    <li>
+      <div class="project-card card">
+        <!-- <img
+          src="{{ item.data.screenshot2 }}"
+          alt="{{ item.data.title }} picture"
+          loading="lazy"
+        /> -->
+        <picture>
+          <source
+            type="image/avif"
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_avif }} 800w, {{ item.data.1200_avif }} 1200w, {{ item.data.1598_avif }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source
+            type="image/webp"
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_webp }} 800w, {{ item.data.1200_webp }} 1200w, {{ item.data.1598_webp }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_jpg }} 800w, {{ item.data.1200_jpg }} 1200w, {{ item.data.1598_jpg }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source type="image/avif" srcset="{{ item.data.regular_avif }}" />
+          <source type="image/webp" srcset="{{ item.data.regular_webp }}" />
+          <img src="{{ item.data.regular_jpg }}" alt="{{ item.data.alt }}" />
+        </picture>
+        <div class="project-card-text">
+          <header class="project-card-header">
+            <h3>
+              <a href="{{ item.data.projectUrl }}">{{ item.data.title }}</a>
+            </h3>
+            <span class="tag">{{ item.data.type }}</span>
+          </header>
+          <p card="card-text">{{ item.data.description }}</p>
+          <a href="{{ item.data.projectUrl }}">{{ 'link' | i18n }} →</a>
+        </div>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+  <a class="button button-secondary" href="/{{ locale }}/projects/"
+    >More projects</a
+  >
+</section>
+
+<!-- Blog Section ↓ -->
+<section class="posts-section">
+  <h2>Some of my recent posts</h2>
+  <ul class="posts-list">
+    {%- for post in collections.recent_en | reverse -%}
+    <li class="post">
+      <h3>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      </h3>
+      <p class="post-date">
+        <strong>{{ post.date | htmlDateString }}</strong>
+      </p>
+      <p>{{ post.data.description }}</p>
+      <a class="read-more" href="{{ post.url | url }}"
+        >{{ 'read_more' | i18n }} →</a
+      >
+    </li>
+    {%- endfor -%}
+  </ul>
+  <a class="button button-secondary" href="/{{ locale }}/blog/">More posts</a>
+</section>
+
+<!-- About section ↓ -->
+<section class="about-section">
+  <div class="about-card card">
+    <div class="profile-pic">
+      <img
+        src="https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,f_auto,q_auto,w_600/v1618244640/portfolio/profile-pic_ytetho.png"
+        alt="Profile picture of Rafael Calvo"
+        loading="lazy"
+      />
+    </div>
+    <div class="profile-description">
+      <h3>I'm Rafael Calvo</h3>
+      <p>
+        And I'm a UX Designer and Frontend Web Developer focused on helping
+        businessess grow their conversion rates by making websites that are good
+        looking, accesible and kind to the users.
+      </p>
+      <p class="available">I'm currently available for work.</p>
+      <div class="about-cta">
+        <a class="button button-primary" href="/{{ locale }}/contact/">{{
+          'contact_me' | i18n
+        }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Card ↓ -->
+<section class="contact">
+  <div class="contact-card card">
+    <h3>Ready to start?</h3>
+    <p>
+      Let's talk and discuss the approach to how your next website will be made
+      by focusing in good UX Design, Development, your objectives and your
+      customers needs.
+    </p>
+    <div class="contact-cta">
+      <a class="button button-primary" href="/{{ locale }}/contact/">{{
+        'contact_me' | i18n
+      }}</a>
+    </div>
+  </div>
+</section>

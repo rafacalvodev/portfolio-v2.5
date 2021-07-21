@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+.posts-list {
+  padding-top: 1.5em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  li {
+    border-top: 0.1em solid $manatee;
+  }
+
+  .post {
+    margin-bottom: 2rem;
+  }
+
+  .post-date {
+    &::first-letter {
+      text-transform: capitalize;
+    }
+    max-width: 32ch;
+  }
+
+  .post-info {
+    padding: 1em 0 0.5em 0;
+    margin-bottom: 1.25rem;
+  }
+}

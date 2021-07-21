@@ -1,0 +1,26 @@
+---
+  layout: layouts/base.njk
+  title: Blog of Rafael Calvo
+  header: 'Blog posts'
+  description: 'Here I write about various things, including web design and development, how I did some things, some tutorials and more.'
+---
+
+<header class="blog-header">
+  <h1>{{ header }}</h1>
+  <p>{{ description }}</p>
+</header>
+
+<ul class="posts-list">
+  {%- for post in collections.blog_en | reverse -%}
+  <li class="post">
+    <h3>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </h3>
+    <span class="post-date"
+      ><strong>{{ post.date | readableDate }}</strong></span
+    >
+    <p>{{ post.data.description }}</p>
+    <a class="read-more" href="{{ post.url | url }}">{{ 'read_more' | i18n }} →</a>
+  </li>
+  {%- endfor -%}
+</ul>

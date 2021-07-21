@@ -1,0 +1,64 @@
+@use "../abstracts/" as *;
+
+$scrollLength: 100vh;
+
+.back-to-top-wrapper {
+  position: absolute;
+  top: $scrollLength;
+  right: 1.5rem;
+  bottom: 0;
+  width: 3em;
+  pointer-events: none;
+
+  @include mq(small) {
+    right: 2rem;
+  }
+}
+
+.back-to-top-link {
+  position: fixed;
+
+  position: sticky;
+
+  pointer-events: all;
+
+  top: 88%;
+  right: 1.5rem;
+
+  color: $white;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: $b-radius-s;
+  border-width: 0.075em;
+  border-color: var(--border);
+  border-style: solid;
+  padding: 0.5em;
+
+  background-color: $neon-blue;
+  transition: box-shadow ease-in-out 0.1s, transform ease-in-out 0.1s;
+  box-shadow: 4px 4px 0 var(--btn-shadow);
+
+  @include mq(small) {
+    bottom: 16%;
+    right: 3.5rem;
+  }
+
+  &:hover {
+    box-shadow: 6px 6px 0 var(--btn-shadow);
+    transform: translate3d(-2px, -2px, 0);
+  }
+
+  &:focus {
+    outline: max(1px, 0.1em) dashed $ghost-white;
+    outline-offset: -0.25em;
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ dir }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Google site verification -->
+    <!-- <meta
+      name="google-site-verification"
+      content="auf16tQU8g628GQukV7HBVqHUxpVn5EokUDJRs8KDnI"
+    /> -->
+    <!--  Google analytics & tag manager ↓  -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-G0X2B3Y9R0"
+      rel="preload"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-G0X2B3Y9R0');
+    </script> -->
+    <!-- Google Tag Manager -->
+    <!-- <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-K8VMXRH');
+    </script> -->
+    <!-- End Google Tag Manager -->
+
+    <link
+      rel="preload"
+      href="../../assets/fonts/Exo2-VariableFont_wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href="../../assets/fonts/Alegreya-Italic-VariableFont_wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href="../../assets/fonts/Alegreya-VariableFont_wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href="../../assets/fonts/WorkSans-VariableFont_wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Exo+2:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="shortcut icon" href="../../favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../favicon.png" type="image/png" />
+
+    <meta property="title" content="{{ title }}" />
+    <meta property="image" content="{{ image }}" />
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="{{ keywords }}" />
+    <meta name="author" content="{{ site.author }}" />
+
+    <!-- open graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:image" content="{{ image }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta name="og:keywords" content="{{ keywords }}" />
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="{{ site.twitter }}" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:image" content="{{ image }}" />
+
+    {{
+      head
+    }}
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <!-- <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-K8VMXRH"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+        rel="preload"
+      ></iframe
+    ></noscript> -->
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="nav" id="top">{% include 'partials/nav.njk' %}</header>
+
+    <main class="container main">
+      {{ content | safe }}
+      {% include 'components/scroll-top.njk' %}
+    </main>
+
+    {% include 'partials/footer.njk' %}
+    <!-- <script src="../../assets/js/main.js"></script> -->
+    <script>
+      // Functions to open and close the sidenav go here:
+      function openNav() {
+        document.getElementById('sidenav').style.left = '0';
+      }
+
+      function closeNav() {
+        document.getElementById('sidenav').style.left = '-100%';
+      }
+
+      //Functions to toggle dark mode go here
+      // check for saved 'darkMode' in localStorage
+      let darkMode = localStorage.getItem('darkMode');
+
+      // const darkModeToggle = document.querySelector('.dark-mode-toggle');
+
+      const enableDarkMode = () => {
+        // 1. Add the class to the body
+        document.body.classList.add('darkmode');
+        // 2. Update darkMode in localStorage
+        localStorage.setItem('darkMode', 'enabled');
+      };
+
+      const disableDarkMode = () => {
+        // 1. Remove the class from the body
+        document.body.classList.remove('darkmode');
+        // 2. Update darkMode in localStorage
+        localStorage.setItem('darkMode', null);
+      };
+
+      // If the user already visited and enabled darkMode
+      // start things off with it on
+      if (darkMode === 'enabled') {
+        enableDarkMode();
+      }
+
+      function darkModeToggle() {
+        // get their darkMode setting
+        darkMode = localStorage.getItem('darkMode');
+
+        // if it not current enabled, enable it
+        if (darkMode !== 'enabled') {
+          enableDarkMode();
+          // if it has been enabled, turn it off
+        } else {
+          disableDarkMode();
+        }
+      }
+    </script>
+  </body>
+</html>

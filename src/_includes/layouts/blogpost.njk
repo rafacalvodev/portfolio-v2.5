@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="blog-post">
+  <header class="post-header">
+    <div class="go-back">
+      <a class="go-back-link" href="/{{ locale }}/blog/"
+        >← {{ 'go_to_blog' | i18n }}</a
+      >
+      <a class="go-back-link" href="/{{ locale }}/">← {{ 'go_home' | i18n }}</a>
+    </div>
+    <section>
+      <div class="post-header-text">
+        <h1>{{ title }}</h1>
+        <p>{{ 'post_date' | i18n }}: {{ date | readableDate }}</p>
+      </div>
+      <img src="{{ banner }}" alt="" />
+    </section>
+  </header>
+  {{ content | safe }}
+</article>

@@ -1,0 +1,85 @@
+@use '../abstracts' as *;
+
+.go-back {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5em;
+  border-bottom: 3px dotted $manatee;
+
+  h1 {
+    margin: 0;
+    padding: 0.5em 0;
+  }
+
+  p {
+    font-family: var(--ff-main);
+  }
+
+  &-text {
+    margin-bottom: 2rem;
+  }
+}
+
+.blog-post {
+  margin-bottom: 2rem;
+  width: 70ch;
+
+  a {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: underline solid;
+    text-decoration-thickness: 0.095em;
+    text-decoration-color: var(--clr-primary);
+  }
+
+  .tag {
+    border: none;
+  }
+
+  span {
+    background: none;
+    box-shadow: none;
+    font-size: inherit;
+  }
+
+  ul {
+    list-style: square;
+    margin-left: 1.75rem;
+    li::marker {
+      box-shadow: 4px 4px 0 rgba($neon-blue, 0.4);
+    }
+  }
+
+  ol {
+    li::marker {
+      font-size: 100%;
+      font-weight: bold;
+      text-shadow: 4px 4px 0 rgba($neon-blue, 0.4);
+    }
+  }
+
+  p,
+  ol,
+  ul {
+    code {
+      background-color: #babaff;
+      color: $oxford-blue;
+      padding: 0.15em;
+    }
+  }
+
+  figure {
+    margin-top: 1rem;
+  }
+
+  figcaption {
+    text-align: center;
+    font-style: italic;
+  }
+}

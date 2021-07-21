@@ -1,0 +1,19 @@
+<footer class="footer">
+  <div class="container footer-links">
+    {% include 'components/language-selector.njk' %} {% include
+    'components/social-links.njk' %}
+  </div>
+  <div class="footer-copy">
+    <p>
+      <small> © 2021 | Rafael Calvo </small>
+    </p>
+    <p>
+      <small>
+        {{ 'made_with' | i18n }}. {{ 'hosted_on' | i18n }}
+        <a href="https://www.netlify.com/">Netlify</a>.
+        {{ 'public_code' | i18n }}
+        <a href="https://github.com/rafacalvodev/portfolio-v2.5">Github</a>.
+      </small>
+    </p>
+  </div>
+</footer>

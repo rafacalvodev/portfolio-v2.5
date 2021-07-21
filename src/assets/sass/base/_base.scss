@@ -1,0 +1,71 @@
+@use '../abstracts' as *;
+@use '../utilities' as *;
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+* {
+  //scrollbar-color: var(--clr-primary) light;
+  //scrollbar-color: var(--clr-primary) #f4f4f4;
+  scrollbar-color: inherit;
+}
+
+body {
+  //border-top: 0.5rem solid var(--clr-primary);
+  background-color: var(--background);
+  transition: ease 0.5s;
+
+  // required to make sure the `absolute` positioning of
+  // the anchor wrapper is indeed `relative` to this element vs. the body
+  position: relative;
+}
+
+a,
+a:not(.button):hover {
+  text-decoration: underline solid;
+  text-decoration-thickness: 0.095em;
+  text-decoration-color: var(--clr-primary);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol li::marker {
+  font-weight: 600;
+}
+
+svg {
+  color: var(--clr-dark);
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+.visuallyhidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.read-more {
+  font-weight: 600;
+  text-decoration: underline solid;
+  text-decoration-thickness: 0.095em;
+  text-decoration-color: var(--clr-primary);
+  margin-top: 1rem;
+}

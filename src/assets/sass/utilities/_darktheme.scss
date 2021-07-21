@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.darkmode {
+  --clr-light: #fbf8ff;
+  --dark-bg: #0f0f2b;
+  --clr-primary: #5f5fff;
+  --available: #ff7575;
+  color: var(--clr-light);
+  --background: var(--dark-bg);
+  --border: var(--clr-light);
+  --btn-shadow: var(--clr-light);
+
+  svg {
+    color: var(--clr-light);
+  }
+
+  --svg-stroke: var(--clr-light);
+
+  --header-text-shadow: -1px -1px 0 var(--clr-light), 1px 1px 0 var(--clr-light),
+    1px 2px 0 var(--clr-light), 1px 3px 0 var(--clr-light),
+    3px 1px 0 var(--clr-light), 2px 1px 0 var(--clr-light),
+    2px 2px 0 var(--clr-light), 3px 3px 1px var(--clr-light);
+
+  --subheader-text-shadow: -1px -1px 0 var(--clr-light),
+    1px 1px 0 var(--clr-light), 1px 2px 0 var(--clr-light),
+    2px 1px 1px var(--clr-light), 2px 2px 0 var(--clr-light);
+}

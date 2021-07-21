@@ -1,0 +1,15 @@
+---
+layout: layouts/base
+---
+
+<header>
+  <div class="project-picture">
+    <img src="{{ screenshot }}" alt="{{ title }} Screenshot" loading="lazy" />
+  </div>
+
+  <h2>{{ title }}</h2>
+</header>
+
+<article>
+  {{ content | safe }}
+</article>

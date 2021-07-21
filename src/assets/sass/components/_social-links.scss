@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+.social-main-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  gap: 1em;
+
+  a {
+    svg {
+      transition: color ease-in-out 0.2s;
+      width: clamp(1.5rem, 3vw, 1.75rem);
+    }
+  }
+
+  a:hover {
+    svg {
+      color: $neon-blue;
+    }
+  }
+}

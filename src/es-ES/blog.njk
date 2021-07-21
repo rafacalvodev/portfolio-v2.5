@@ -1,0 +1,26 @@
+---
+  layout: layouts/base.njk
+  title: Blog de Rafael Calvo — Desarrollador Web Front End y Diseñador UI/UX
+  description: 'Aquí escribo sobre varias cosas, entre ellas diseño y desarrollo web, cómo hice algunas cosas, algunos tutoriales y algún que otro pensamiento esporádico.'
+  header: Publicaciones
+---
+
+<header class="blog-header">
+  <h1>{{ header }}</h1>
+  <p>{{ description }}</p>
+</header>
+
+<ul class="posts-list">
+  {%- for post in collections.español | reverse -%}
+  <li class="post">
+    <h3>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </h3>
+    <span class="post-date"
+      ><strong>{{ post.date | readableDate }}</strong></span
+    >
+    <p>{{ post.data.description }}</p>
+    <a class="read-more" href="{{ post.url | url }}">{{ 'read_more' | i18n }} →</a>
+  </li>
+  {%- endfor -%}
+</ul>

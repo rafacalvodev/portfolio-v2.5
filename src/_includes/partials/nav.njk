@@ -1,0 +1,232 @@
+<div class="nav-mobile">
+  <nav aria-label="{{ 'nav' | i18n }}" class="nav-mobile-main" id="mobile-nav">
+    <h2 class="visuallyhidden">{{ 'mobile_menu' | i18n }}</h2>
+    <ul class="nav-mobile-links">
+      <li>
+        <a href="/{{ locale }}/">{{ 'home' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/projects/">{{ 'my_portfolio' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/blog/">{{ 'blog' | i18n }}</a>
+      </li>
+    </ul>
+    <button
+      onclick="openNav()"
+      aria-label="Icon-only Button"
+      role="button"
+      class="nav-button hamburger"
+      id="hamburger"
+    >
+      <svg
+        fill="currentColor"
+        aria-hidden="true"
+        focusable="false"
+        height="384pt"
+        viewBox="0 -53 384 384"
+        width="384pt"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+        />
+        <path
+          d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+        />
+        <path
+          d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+        />
+      </svg>
+    </button>
+    <span id="menu-button" class="visuallyhidden">{{
+      'open_side_menu' | i18n
+    }}</span>
+  </nav>
+</div>
+<div class="sidenav" id="sidenav">
+  <div class="top-buttons">
+    <button
+      onclick="darkModeToggle()"
+      id="dark-mode-toggle"
+      class="dark-mode-toggle nav-button"
+      aria-label="{{ 'icon_button' | i18n }}"
+      role="{{ 'button' | i18n }}"
+    >
+      <svg
+        fill="currentColor"
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="adjust"
+        class="svg-inline--fa fa-adjust fa-w-16"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"
+        ></path>
+      </svg>
+    </button>
+    <span id="dark-mode-button" class="visuallyhidden"
+      >Dark mode toggle button</span
+    >
+    <button
+      onclick="closeNav()"
+      class="nav-button"
+      aria-label="{{ 'icon_button' | i18n }}"
+      role="{{ 'button' | i18n }}"
+    >
+      <svg
+        fill="currentColor"
+        aria-hidden="true"
+        focusable="false"
+        height="512pt"
+        viewBox="0 0 512 512"
+        width="512pt"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m256 512c-141.160156 0-256-114.839844-256-256s114.839844-256 256-256 256 114.839844 256 256-114.839844 256-256 256zm0-475.429688c-120.992188 0-219.429688 98.4375-219.429688 219.429688s98.4375 219.429688 219.429688 219.429688 219.429688-98.4375 219.429688-219.429688-98.4375-219.429688-219.429688-219.429688zm0 0"
+        />
+        <path
+          d="m347.429688 365.714844c-4.679688 0-9.359376-1.785156-12.929688-5.359375l-182.855469-182.855469c-7.144531-7.144531-7.144531-18.714844 0-25.855469 7.140625-7.140625 18.714844-7.144531 25.855469 0l182.855469 182.855469c7.144531 7.144531 7.144531 18.714844 0 25.855469-3.570313 3.574219-8.246094 5.359375-12.925781 5.359375zm0 0"
+        />
+        <path
+          d="m164.570312 365.714844c-4.679687 0-9.355468-1.785156-12.925781-5.359375-7.144531-7.140625-7.144531-18.714844 0-25.855469l182.855469-182.855469c7.144531-7.144531 18.714844-7.144531 25.855469 0 7.140625 7.140625 7.144531 18.714844 0 25.855469l-182.855469 182.855469c-3.570312 3.574219-8.25 5.359375-12.929688 5.359375zm0 0"
+        />
+      </svg>
+    </button>
+    <span id="close-button" class="visuallyhidden">Close side menu button</span>
+  </div>
+  <div class="logo-area">
+    <a href="/{{ locale }}/">
+      <svg
+        width="384"
+        height="250"
+        viewBox="0 0 384 250"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="logo"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          stroke-width="4"
+          d="M170.208 240.331L124.416 159.115L118.08 148.171L116.64 145.579C158.4 136.363 180 105.547 180 75.3075C180 55.4355 170.784 36.4275 154.944 23.1795C138.816 9.35547 116.064 2.15548 89.856 2.15548H5.76C2.592 2.15548 0 4.74748 0 7.62748V30.3795L2.88 35.5635V35.8515L41.184 103.243H0V243.787C0 246.955 2.592 249.547 5.76 249.547H39.456C42.336 249.547 44.928 246.955 44.928 243.787V148.171H66.528L72.576 159.115L121.824 246.091L122.4 246.955C123.264 248.395 124.992 249.547 127.008 249.547H165.6C168.768 249.547 171.072 246.955 171.072 243.499C171.072 242.635 171.072 241.771 170.496 240.907L170.208 240.331ZM86.688 92.5875L61.056 47.0835H89.856C120.96 47.0835 134.784 61.7715 134.784 75.3075C134.784 86.8275 124.416 99.4995 101.088 102.667C98.496 102.955 95.616 103.243 92.736 103.243L86.688 92.5875Z"
+          fill="#5F5FFF"
+        />
+        <path
+          stroke-width="4"
+          d="M359.224 237.603C366.712 234.147 373.912 230.115 380.824 225.219V224.931H381.112C381.112 224.643 381.112 224.643 381.4 224.643C383.704 222.627 383.992 218.883 381.688 216.579L360.088 190.947C358.36 188.643 354.904 188.067 352.6 189.507C352.6 189.795 352.312 189.795 352.312 189.795C319.48 211.971 274.264 206.211 248.056 175.395C219.832 141.987 223.864 92.1635 256.984 63.9395C283.192 41.7635 320.056 39.4595 347.992 55.8755C350.296 57.0275 352.6 56.7395 354.328 55.2995L381.4 32.5475C383.704 30.5315 383.992 26.7875 381.688 24.1955L381.112 23.6195L380.248 23.0435C335.032 -9.21252 271.96 -8.06052 227.896 29.3795C175.48 73.7315 169.144 152.355 213.496 204.483C250.072 247.683 309.976 259.491 359.224 237.603Z"
+          fill="#5F5FFF"
+        />
+      </svg>
+    </a>
+  </div>
+  <nav
+    aria-label="{{ 'nav' | i18n }}"
+    class="sidenav-main-menu"
+    id="sidenav-menu"
+  >
+    <h2 class="visuallyhidden">{{ 'main_menu' | i18n }}</h2>
+    <ul class="sidenav-links">
+      <li>
+        <a href="/{{ locale }}/">{{ 'home' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/projects/">{{ 'my_portfolio' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/blog/">{{ 'blog' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/services/">{{ 'my_services' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/about/">{{ 'about_me_1' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/contact/">{{ 'contact_me_1' | i18n }}</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="sidenav-social-links">
+    {% include 'components/language-selector.njk' %}
+    {% include 'components/social-links.njk' %}
+  </div>
+</div>
+<div class="nav-desktop container">
+  <a href="/{{ locale }}/">
+    <svg
+      width="384"
+      height="250"
+      viewBox="0 0 384 250"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="logo"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        stroke-width="4"
+        d="M170.208 240.331L124.416 159.115L118.08 148.171L116.64 145.579C158.4 136.363 180 105.547 180 75.3075C180 55.4355 170.784 36.4275 154.944 23.1795C138.816 9.35547 116.064 2.15548 89.856 2.15548H5.76C2.592 2.15548 0 4.74748 0 7.62748V30.3795L2.88 35.5635V35.8515L41.184 103.243H0V243.787C0 246.955 2.592 249.547 5.76 249.547H39.456C42.336 249.547 44.928 246.955 44.928 243.787V148.171H66.528L72.576 159.115L121.824 246.091L122.4 246.955C123.264 248.395 124.992 249.547 127.008 249.547H165.6C168.768 249.547 171.072 246.955 171.072 243.499C171.072 242.635 171.072 241.771 170.496 240.907L170.208 240.331ZM86.688 92.5875L61.056 47.0835H89.856C120.96 47.0835 134.784 61.7715 134.784 75.3075C134.784 86.8275 124.416 99.4995 101.088 102.667C98.496 102.955 95.616 103.243 92.736 103.243L86.688 92.5875Z"
+        fill="#5F5FFF"
+      />
+      <path
+        stroke-width="4"
+        d="M359.224 237.603C366.712 234.147 373.912 230.115 380.824 225.219V224.931H381.112C381.112 224.643 381.112 224.643 381.4 224.643C383.704 222.627 383.992 218.883 381.688 216.579L360.088 190.947C358.36 188.643 354.904 188.067 352.6 189.507C352.6 189.795 352.312 189.795 352.312 189.795C319.48 211.971 274.264 206.211 248.056 175.395C219.832 141.987 223.864 92.1635 256.984 63.9395C283.192 41.7635 320.056 39.4595 347.992 55.8755C350.296 57.0275 352.6 56.7395 354.328 55.2995L381.4 32.5475C383.704 30.5315 383.992 26.7875 381.688 24.1955L381.112 23.6195L380.248 23.0435C335.032 -9.21252 271.96 -8.06052 227.896 29.3795C175.48 73.7315 169.144 152.355 213.496 204.483C250.072 247.683 309.976 259.491 359.224 237.603Z"
+        fill="#5F5FFF"
+      />
+    </svg>
+  </a>
+  <nav aria-label="{{ 'nav' | i18n }}" id="desktop-nav">
+    <h2 class="visuallyhidden">{{ 'main_menu' | i18n }}</h2>
+    <ul class="nav-links">
+      <li>
+        <a href="/{{ locale }}/">{{ 'home' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/projects/">{{ 'my_portfolio' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/blog/">{{ 'blog' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/services/">{{ 'my_services' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/about/">{{ 'about_me_1' | i18n }}</a>
+      </li>
+      <li>
+        <a href="/{{ locale }}/contact/">{{ 'contact_me_1' | i18n }}</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="buttons">
+    {% include 'components/language-selector.njk' %}
+    <button
+      onclick="darkModeToggle()"
+      id="dark-mode-toggle"
+      class="dark-mode-toggle nav-button"
+      aria-label="{{ 'icon_button' | i18n }}"
+      role="{{ 'button' | i18n }}"
+    >
+      <svg
+        fill="currentColor"
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="adjust"
+        role="icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"
+        ></path>
+      </svg>
+    </button>
+  </div>
+</div>

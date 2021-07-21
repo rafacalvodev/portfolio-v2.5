@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.card {
+  border-radius: $b-radius-l;
+  border: 0.15em solid var(--border);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    h4 {
+      width: 60%;
+    }
+  }
+}

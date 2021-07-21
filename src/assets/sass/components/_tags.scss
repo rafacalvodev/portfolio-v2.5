@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+.tag {
+  font-size: 0.8em;
+  background-color: $neon-blue;
+  color: $white;
+  font-weight: 600;
+  padding: 0.2em 0.55em;
+  border-radius: $b-radius-sm;
+  border: 0.075em solid var(--border);
+  box-shadow: 4px 4px 0 var(--btn-shadow);
+  position: relative;
+  height: 100%;
+  width: 6rem;
+  text-align: center;
+
+  @include mq(small) {
+    width: auto;
+    padding: 0.3em 0.75em;
+  }
+
+  a:focus {
+    outline: max(1px, 0.1em) dashed $neon-blue;
+    outline-offset: 0.75em;
+  }
+}

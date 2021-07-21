@@ -1,0 +1,158 @@
+---
+  layout: layouts/base.njk
+  title: Rafal Calvo — Desarrollador Web Front End y Diseñador UI/UX
+  header: Puedo ayudarte a construir un sitio web rápido, atractivo y accesible
+  subheader: Hola, soy Rafael Calvo
+  description: 'Rafael Calvo, desarrollador web front end y diseñador UX. De Caracas, Venezuela.'
+---
+
+<!-- Hero Section ↓ -->
+<section class="home-hero">
+  <div class="main-hero-text">
+    <h1>
+      <small>{{ subheader }}</small
+      ><br />{{ header }}
+    </h1>
+  </div>
+
+  <div class="main-hero-cta">
+    <a class="button button-primary" href="#projects">Mira mis trabajos</a>
+    <a class="button button-secondary" href="/{{ locale }}/contact/">{{
+      'contact_me' | i18n
+    }}</a>
+  </div>
+</section>
+
+<!-- Portfolio Section ↓ -->
+<section class="projects-section" id="projects">
+  <h2>Algunos de mis trabajos</h2>
+  <ul class="projects-grid">
+    {%- for item in collections.destacado -%}
+    <li>
+      <div class="project-card card">
+        <!-- <img
+          src="{{ item.data.screenshot2 }}"
+          alt="{{ item.data.title }} picture"
+        />  -->
+        <picture>
+          <source
+            type="image/avif"
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_avif }} 800w, {{ item.data.1200_avif }} 1200w, {{ item.data.1598_avif }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source
+            type="image/webp"
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_webp }} 800w, {{ item.data.1200_webp }} 1200w, {{ item.data.1598_webp }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_jpg }} 800w, {{ item.data.1200_jpg }} 1200w, {{ item.data.1598_jpg }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source type="image/avif" srcset="{{ item.data.regular_avif }}" />
+          <source type="image/webp" srcset="{{ item.data.regular_webp }}" />
+          <img src="{{ item.data.regular_jpg }}" alt="{{ item.data.alt }}" />
+        </picture>
+        <div class="project-card-text">
+          <header class="project-card-header">
+            <h3>
+              <a href="{{ item.data.projectUrl }}">{{ item.data.title }}</a>
+            </h3>
+            <span class="tag">{{ item.data.type }}</span>
+          </header>
+          <p card="card-text">{{ item.data.description }}</p>
+          <a class="read-more" href="{{ item.data.projectUrl }}"
+            >{{ 'link' | i18n }} →</a
+          >
+        </div>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+  <a class="button button-secondary" href="/{{ locale }}/projects/"
+    >Más proyectos</a
+  >
+</section>
+
+<!-- Blog Section ↓ -->
+<section class="posts-section">
+  <h2>Mis publicaciones recientes</h2>
+  <ul class="posts-list">
+    {%- for post in collections.reciente | reverse -%}
+    <li class="post">
+      <h3>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      </h3>
+      <p class="post-date">
+        <strong>{{ post.date | readableDate }}</strong>
+      </p>
+      <p>{{ post.data.description }}</p>
+      <a class="read-more" href="{{ post.url | url }}"
+        >{{ 'read_more' | i18n }} →</a
+      >
+    </li>
+    {%- endfor -%}
+  </ul>
+  <a class="button button-secondary" href="/{{ locale }}/blog/"
+    >Más publicaciones</a
+  >
+</section>
+
+<!-- About section ↓ -->
+<section class="about-section">
+  <div class="about-card card">
+    <div class="profile-pic">
+      <img
+        src="https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,f_auto,q_auto,w_600/v1618244640/portfolio/profile-pic_ytetho.png"
+        alt="Profile picture of Rafael Calvo"
+        loading="lazy"
+      />
+    </div>
+    <div class="profile-description">
+      <h3>I'm Rafael Calvo</h3>
+      <p>
+        Y soy diseñador UX y desarrollador web frontend enfocado en ayudar a las
+        empresas a aumentar sus tasas de conversión creando sitios web
+        atractivos, accesibles y amables con los usuarios.
+      </p>
+      <p class="available">Actualmente estoy disponible para trabajar.</p>
+      <div class="about-cta">
+        <a class="button button-primary" href="/{{ locale }}/about/">{{
+          'about_me' | i18n
+        }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Card ↓ -->
+<section class="contact">
+  <div class="contact-card card">
+    <h3>¿Listo para empezar?</h3>
+    <p>
+      Hablemos y discutamos el enfoque de cómo se hará su próximo sitio web
+      enfocándonos en un buen Diseño, Desarrollo de UX, sus objetivos y las
+      necesidades de sus clientes.
+    </p>
+    <div class="contact-cta">
+      <a class="button button-primary" href="/{{ locale }}/contact/">{{
+        'contact_me' | i18n
+      }}</a>
+    </div>
+  </div>
+</section>

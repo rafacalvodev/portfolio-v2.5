@@ -1,0 +1,141 @@
+---
+  layout: layouts/base.njk
+  title: Portafolio de Rafael Calvo — Desarrollador Web Front End y Diseñador UI/UX
+  description: Todos (o casi todos) los proyectos y trabajos que he hecho. Más abajo hay una sección de Patio de Recreo donde estan varios proyectos personales y experimentos que he estado haciendo.
+---
+
+<header class="projects-header">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</header>
+<section class="projects-section" id="projects">
+  <ul class="projects-grid">
+    {%- for item in collections.proyectos -%}
+    <li>
+      <div class="project-card card">
+        <picture>
+          <source
+            type="image/avif"
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_avif }} 800w, {{ item.data.1200_avif }} 1200w, {{ item.data.1598_avif }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source
+            type="image/webp"
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_webp }} 800w, {{ item.data.1200_webp }} 1200w, {{ item.data.1598_webp }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_jpg }} 800w, {{ item.data.1200_jpg }} 1200w, {{ item.data.1598_jpg }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source type="image/avif" srcset="{{ item.data.regular_avif }}" />
+          <source type="image/webp" srcset="{{ item.data.regular_webp }}" />
+          <img src="{{ item.data.regular_jpg }}" alt="{{ item.data.alt }}" />
+        </picture>
+        <!-- <img
+          src="{{ item.data.screenshot2 }}"
+          alt="{{ item.data.title }} picture"
+        /> -->
+        <div class="project-card-text">
+          <header class="project-card-header">
+            <!-- <h4>
+              <a href="{{ item.url | url }}">{{ item.data.title }}</a>
+            </h4> -->
+            <h3>
+              <a href="{{ item.data.projectUrl }}">{{ item.data.title }}</a>
+            </h3>
+            <span class="tag">{{ item.data.type }}</span>
+          </header>
+          <p card="card-text">{{ item.data.description }}</p>
+          {#
+          <a class="read-more" href="{{ item.url | url }}"
+            >{{ 'read_more' | i18n }} →</a
+          >
+          #}
+          <a class="read-more" href="{{ item.data.projectUrl }}"
+            >{{ 'link' | i18n }} →</a
+          >
+        </div>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="playground-section">
+  <h2>Parque de Recreo</h2>
+  <ul class="playground-grid">
+    {%- for item in collections.recreo -%}
+    <li>
+      <div class="playground-card card">
+        <picture>
+          <source
+            type="image/avif"
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_avif }} 800w, {{ item.data.1200_avif }} 1200w, {{ item.data.1598_avif }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source
+            type="image/webp"
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_webp }} 800w, {{ item.data.1200_webp }} 1200w, {{ item.data.1598_webp }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source
+            media="(-webkit-min-device-pixel-ratio: 1.5)"
+            srcset="{{ item.data.800_jpg }} 800w, {{ item.data.1200_jpg }} 1200w, {{ item.data.1598_jpg }} 1598w"
+            sizes="
+      (min-width: 1066px) 743px,
+      (min-width: 800px) calc(75vw - 57px),
+      100vw
+    "
+          />
+          <source type="image/avif" srcset="{{ item.data.regular_avif }}" />
+          <source type="image/webp" srcset="{{ item.data.regular_webp }}" />
+          <img src="{{ item.data.regular_jpg }}" alt="{{ item.data.alt }}" />
+        </picture>
+        <!-- <img
+          src="{{ item.data.screenshot2 }}"
+          alt="{{ item.data.title }} picture"
+        /> -->
+        <div class="playground-card-text">
+          <header class="project-card-header">
+            <h3>
+              <a href="{{ item.data.projectUrl }}">{{ item.data.title }}</a>
+            </h3>
+            <span class="tag">{{ item.data.type }}</span>
+          </header>
+          <!-- <p card="card-text">{{ item.data.description }}</p> -->
+          <!-- <a href="{{ item.url | url }}">{{ 'read_more' | i18n }} →</a> -->
+          <a class="read-more" href="{{ item.data.projectUrl }}"
+            >{{ 'link' | i18n }} →</a
+          >
+        </div>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>

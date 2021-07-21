@@ -1,0 +1,22 @@
+{# Is this ludicrous or crafty? #} {% set pageUrl =
+page.url.split('/').slice(2).join('/') %} {% if locales.length %}
+<div class="lang">
+  <p>{{ 'select_language' | i18n }}:</p>
+  <ul
+    role="{{ 'lang_switch' | i18n }}"
+    aria-label="{{ 'lang_switch_title' | i18n }}"
+    class="lang-links"
+  >
+    {% for locale in locales -%}
+    <li>
+      <a
+        href="/{{ locale.code }}/{{ pageUrl }}"
+        rel="alternate"
+        hreflang="{{ locale.code }}"
+        >{{ locale.icon }}-{{ locale.label }}</a
+      >
+    </li>
+    {% endfor -%}
+  </ul>
+</div>
+{% endif %}

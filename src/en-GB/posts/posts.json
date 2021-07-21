@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/blogpost",
+  "pageClass": "post",
+  "tags": ["blog"],
+  "permalink": "/{{ locale }}/blog/{{ page.fileSlug }}/"
+}

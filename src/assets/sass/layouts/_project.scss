@@ -1,0 +1,153 @@
+@use '../abstracts' as *;
+@use '../utilities' as *;
+@use '../base' as *;
+
+.project {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+
+  &-picture {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-family: var(--ff-main);
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &-info {
+    font-family: var(--ff-main);
+    background-color: $manatee;
+    color: $oxford-blue;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    flex-direction: column;
+
+    @include mq(small) {
+      width: 80%;
+      margin-bottom: 3rem;
+      flex-direction: row;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    p:first-child {
+      font-weight: 600;
+    }
+
+    a {
+      color: $neon-blue;
+    }
+  }
+}
+
+.playground-section {
+  --playground-bg: #ffea64;
+  --v-dark-gray: #1c1c1c;
+  --red: #ff0000;
+
+  --playground-text-shadow: -1px -1px 0 var(--v-dark-gray),
+    1px 1px 0 var(--v-dark-gray), 1px 2px 0 var(--v-dark-gray),
+    2px 1px 1px var(--v-dark-gray), 2px 2px 0 var(--v-dark-gray);
+
+  margin-top: 2.5rem;
+  padding: 0.5em;
+  border-radius: $b-radius-l;
+  border: 0.15em solid var(--border);
+  background: var(--playground-bg);
+  color: var(--v-dark-gray);
+
+  @include mq(small) {
+    padding: 1.5em;
+  }
+
+  h1,
+  h2 {
+    color: var(--red);
+    text-shadow: var(--playground-text-shadow);
+  }
+
+  h3 {
+    margin-right: auto;
+  }
+
+  .card {
+    height: 100%;
+    border: 0.15em solid var(--v-dark-gray);
+  }
+
+  .playground-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin-top: 2rem;
+
+    @include mq(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .playground-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    picture {
+      @include mq(small) {
+        width: 100%;
+        flex: 1 1 0px;
+      }
+    }
+
+    img {
+      @include mq(small) {
+        width: 100%;
+      }
+    }
+  }
+
+  .playground-card-text {
+    margin: 1.25em;
+  }
+
+  .card-header {
+    margin-bottom: 1rem;
+  }
+
+  .tag {
+    color: var(--v-dark-gray);
+    background-color: var(--red);
+    border: 0.075em solid var(--v-dark-gray);
+    box-shadow: 4px 4px 0 var(--v-dark-gray);
+  }
+
+  a {
+    color: var(--red);
+    &:first-child {
+      color: inherit;
+    }
+
+    &:hover {
+      //color: var(--clr-primary);
+      text-decoration: underline solid;
+      text-decoration-thickness: 0.095em;
+      text-decoration-color: var(--red);
+    }
+  }
+
+  .read-more {
+    color: inherit;
+    text-decoration: underline solid;
+    text-decoration-thickness: 0.095em;
+    text-decoration-color: var(--red);
+  }
+}
