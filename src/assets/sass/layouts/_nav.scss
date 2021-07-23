@@ -120,7 +120,13 @@
       gap: 1rem;
     }
 
+    &-social-links {
+      text-align: center;
+    }
+
     .social-links {
+      margin-top: 1rem;
+
       svg {
         width: clamp(2rem, 4vw, 2.5rem);
         height: auto;
