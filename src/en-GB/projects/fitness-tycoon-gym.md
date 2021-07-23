@@ -4,21 +4,21 @@ description: 'Sitio web/blog hecho para mostrar los registros históricos de la 
 layout: layouts/project
 type: Web
 
-regular_jpg: 'https://res.cloudinary.com/dd6wemi8c/image/upload/v1626305694/portfolio/fitness-platoon_vmyuem.jpg'
-regular_avif: 'https://res.cloudinary.com/dd6wemi8c/image/upload/v1626305694/portfolio/fitness-platoon_vmyuem'
-regular_webp: 'https://res.cloudinary.com/dd6wemi8c/image/upload/v1626305694/portfolio/fitness-platoon_vmyuem.webp'
+regular_jpg: 'https://res.cloudinary.com/dd6wemi8c/image/upload/q_auto:best/v1627055870/portfolio/fitness-platoon_pvcuup.jpg'
+regular_avif: 'https://res.cloudinary.com/dd6wemi8c/image/upload/q_auto:best/v1627055870/portfolio/fitness-platoon_pvcuup.avif'
+regular_webp: 'https://res.cloudinary.com/dd6wemi8c/image/upload/q_auto:best/v1627055870/portfolio/fitness-platoon_pvcuup.webp'
 
-800_jpg: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto,w_800/v1626305694/portfolio/fitness-platoon_vmyuem.jpg'
-800_avif: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto,w_800/v1626305694/portfolio/fitness-platoon_vmyuem'
-800_webp: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto,w_800/v1626305694/portfolio/fitness-platoon_vmyuem.webp'
+800_jpg: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto:low,w_800/v1627055870/portfolio/fitness-platoon_pvcuup.jpg'
+800_avif: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto:low,w_800/v1627055870/portfolio/fitness-platoon_pvcuup.avif'
+800_webp: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto:low,w_800/v1627055870/portfolio/fitness-platoon_pvcuup.webp'
 
-1200_jpg: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto,w_1200/v1626305694/portfolio/fitness-platoon_vmyuem.jpg'
-1200_avif: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto,w_1200/v1626305694/portfolio/fitness-platoon_vmyuem'
-1200_webp: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto,w_1200/v1626305694/portfolio/fitness-platoon_vmyuem.webp'
+1200_jpg: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto:eco,w_1200/v1627055870/portfolio/fitness-platoon_pvcuup.jpg'
+1200_avif: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto:eco,w_1200/v1627055870/portfolio/fitness-platoon_pvcuup.avif'
+1200_webp: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto:eco,w_1200/v1627055870/portfolio/fitness-platoon_pvcuup.webp'
 
-1598_jpg: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto,w_1598/v1626305694/portfolio/fitness-platoon_vmyuem.jpg'
-1598_avif: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto,w_1598/v1626305694/portfolio/fitness-platoon_vmyuem'
-1598_webp: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto,w_1598/v1626305694/portfolio/fitness-platoon_vmyuem.webp'
+1598_jpg: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto:good,w_1598/v1627055870/portfolio/fitness-platoon_pvcuup.jpg'
+1598_avif: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto:good,w_1598/v1627055870/portfolio/fitness-platoon_pvcuup.avif'
+1598_webp: 'https://res.cloudinary.com/dd6wemi8c/image/upload/c_scale,q_auto:good,w_1598/v1627055870/portfolio/fitness-platoon_pvcuup.webp'
 
 alt: 'Fitness Tycoon Gym website picture'
 

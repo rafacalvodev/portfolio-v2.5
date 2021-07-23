@@ -75,10 +75,10 @@
 
 <section class="playground-section">
   <h2>Welcome to my Playground</h2>
-  <ul class="projects-grid">
+  <ul class="playground-grid">
     {%- for item in collections.playground -%}
     <li>
-      <div class="project-card card">
+      <div class="playground-card card">
         <picture>
           <source
             type="image/avif"
@@ -113,19 +113,15 @@
           <source type="image/webp" srcset="{{ item.data.regular_webp }}" />
           <img src="{{ item.data.regular_jpg }}" alt="{{ item.data.alt }}" />
         </picture>
-        <div class="project-card-text">
+        <div class="playground-card-text">
           <header class="project-card-header">
-            <h4>
+            <h3>
               <a href="{{ item.data.projectUrl }}">{{ item.data.title }}</a>
-            </h4>
+            </h3>
             <span class="tag">{{ item.data.type }}</span>
           </header>
           <!-- <p card="card-text">{{ item.data.description }}</p> -->
-
-          <!-- <a class="read-more" href="{{ item.url | url }}"
-            >{{ 'read_more' | i18n }} →</a
-          > -->
-
+          <!-- <a href="{{ item.url | url }}">{{ 'read_more' | i18n }} →</a> -->
           <a class="read-more" href="{{ item.data.projectUrl }}"
             >{{ 'link' | i18n }} →</a
           >
