@@ -30,6 +30,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets/sass');
   eleventyConfig.addPassthroughCopy('./src/assets/fonts');
   eleventyConfig.addPassthroughCopy('./src/assets/img');
+  eleventyConfig.addPassthroughCopy('./src/assets/js/main.js');
   eleventyConfig.addPassthroughCopy('./src/assets/favicon.png');
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
 
