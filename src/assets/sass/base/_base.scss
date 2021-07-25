@@ -8,13 +8,10 @@
 }
 
 * {
-  //scrollbar-color: var(--clr-primary) light;
-  //scrollbar-color: var(--clr-primary) #f4f4f4;
   scrollbar-color: inherit;
 }
 
 body {
-  //border-top: 0.5rem solid var(--clr-primary);
   background-color: var(--background);
   transition: ease 0.5s;
 
@@ -42,10 +39,6 @@ ol li::marker {
 
 svg {
   color: var(--clr-dark);
-}
-
-img {
-  width: 100%;
 }
 
 section {
