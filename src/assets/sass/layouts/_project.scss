@@ -36,10 +36,6 @@
       flex-direction: row;
     }
 
-    img {
-      width: 100%;
-    }
-
     p:first-child {
       font-weight: 600;
     }
@@ -107,12 +103,6 @@
         flex: 1 1 0px;
       }
     }
-
-    img {
-      @include mq(small) {
-        width: 100%;
-      }
-    }
   }
 
   .playground-card-text {
@@ -130,18 +120,10 @@
     box-shadow: 4px 4px 0 var(--v-dark-gray);
   }
 
-  a {
-    color: var(--red);
-    &:first-child {
-      color: inherit;
-    }
-
-    &:hover {
-      //color: var(--clr-primary);
-      text-decoration: underline solid;
-      text-decoration-thickness: 0.095em;
-      text-decoration-color: var(--red);
-    }
+  a:hover {
+    text-decoration: underline solid;
+    text-decoration-thickness: 0.095em;
+    text-decoration-color: var(--red);
   }
 
   .read-more {
