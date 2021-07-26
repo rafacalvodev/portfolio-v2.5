@@ -24,4 +24,8 @@
   --subheader-text-shadow: -1px -1px 0 var(--clr-light),
     1px 1px 0 var(--clr-light), 1px 2px 0 var(--clr-light),
     2px 1px 1px var(--clr-light), 2px 2px 0 var(--clr-light);
+
+  h1 > small {
+    color: var(--clr-dark);
+  }
 }
