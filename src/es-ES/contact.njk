@@ -1,13 +1,15 @@
 ---
   layout: layouts/base.njk
   title: Contact Rafael Calvo — Desarrollador Web Front End y Diseñador UI/UX
-  description: 'Rafael Calvo es un desarrollador web front-end'
+  header: Ponte en contacto
+  description: ¿Tienes alguna idea o proyecto que requiere algún diseño o un desarrollador web front-end? Llena el formulario y me pondré en contacto contigo lo mas pronto posible.
+  image: https://i.ibb.co/Cw0K38P/Contact-card-es.png
 ---
 
 <section class="contact">
   <header class="contact-header header">
-    <h1>{{ title }}</h1>
-    <p>Tienes alguna idea o proyecto que requiere algún diseño o un desarrollador front-end? Llena el formulario y me pondré en contacto contigo lo mas pronto posible.</p>
+    <h1>{{ header }}</h1>
+    <p>{{ description }}</p>
   </header>
   <div class="contact-grid">
     <form class="contact-form" name="contact" method="POST" data-netlify="true">
