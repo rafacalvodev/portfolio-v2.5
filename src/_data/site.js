@@ -9,7 +9,7 @@ module.exports = {
     metaDescription: 'Description in english',
   },
   es: {
-    metaTitle: 'Titre en français',
-    metaDescription: 'Description en français',
+    metaTitle: 'Título en español',
+    metaDescription: 'Descripción en español',
   },
 };
